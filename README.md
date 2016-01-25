@@ -5,6 +5,13 @@ A simple project demonstrating
 with [Karaf](http://karaf.apache.org) OSGi container.
 
 
+# About the Karaf feature
+
+Karaf feature is defined in file
+`/src/main/features/features.xml`. The feature depends on scr,
+camel-jackson, camel-spark-rest and camel-core-osgi.
+
+
 # Routing REST with Camel
 
 The main idea is in the routes, see class Routes.
@@ -52,9 +59,11 @@ For example, getting a list of all users:
             .endRest()
 
 The bean returns a Java List of User objects, which is automagically
-transformed to JSON by Jackson, which Camel uses by default. The
-response HTTP Content-Type header is set using the method
-`produces("application/json")`.
+transformed to JSON by Jackson. The response HTTP Content-Type header
+is set using the method `produces("application/json")`.
+
+It is possible to set the output type with method `typeOut`, but it's
+not required by Camel.
 
 
 ### Passing URI parameter to method
