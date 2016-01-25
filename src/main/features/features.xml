@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="rest-api-0.0.1-SNAPSHOT" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+    <repository>mvn:org.apache.camel.karaf/apache-camel/2.16.1/xml/features</repository>
+
+    <feature name="rest-api" version="0.0.1-SNAPSHOT" install="auto">
+        <feature>scr</feature>
+        <feature version="2.16.1">camel-jackson</feature>
+        <feature version="2.16.1">camel-spark-rest</feature>
+        <bundle>mvn:org.apache.camel/camel-core-osgi/2.16.1</bundle>
+
+        <bundle>mvn:fi.jarimatti.sample/rest-api/0.0.1-SNAPSHOT</bundle>
+    </feature>
+
+</features>

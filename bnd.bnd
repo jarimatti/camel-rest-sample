@@ -1,0 +1,2 @@
+Service-Component: *
+Private-Package: fi.jarimatti.sample.restapi.*
